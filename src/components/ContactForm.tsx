@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ContactFormData, FormErrors, ServiceType } from "@/types";
+import { ContactFormData, FormErrors } from "@/types";
+
 import './ContactForm.css';
 
 const ContactForm: React.FC = () => {
@@ -26,10 +27,11 @@ const ContactForm: React.FC = () => {
     
     // Clear error for this field
     if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: undefined
-      }));
+setErrors((prev: FormErrors) => ({
+  ...prev,
+  [name]: "",
+}));
+
     }
   };
 
