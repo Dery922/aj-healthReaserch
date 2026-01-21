@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/components/ContactForm.tsx","./src/components/Footer.tsx","./src/components/Header.tsx","./src/components/Hero.tsx","./src/components/Services.tsx","./src/components/Testimonials.tsx","./src/components/types/index.ts","./src/pages/HomePage.tsx"],"errors":true,"version":"5.9.3"}

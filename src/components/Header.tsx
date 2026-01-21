@@ -262,7 +262,7 @@ const Header: React.FC = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <div className="logo">
-          <h1>HealthEquity<span>Consult</span></h1>
+          <h1>AJHealth.<span>Research</span></h1>
           <p>Advancing Health Equity Worldwide</p>
         </div>
         
