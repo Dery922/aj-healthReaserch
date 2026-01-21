@@ -1,0 +1,140 @@
+.hero {
+  background: linear-gradient(135deg, #e6f7f6 0%, #c2e9eb 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="%234a9d9c" stroke-width="0.5" fill="none"/><path d="M0,60 Q25,70 50,60 T100,60" stroke="%234a9d9c" stroke-width="0.5" fill="none"/></svg>');
+  opacity: 0.1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  color: #1d504d;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 180px;
+}
+
+.primary-btn {
+  background-color: #2a6e6a;
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: #1d504d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(42, 110, 106, 0.3);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #2a6e6a;
+  border: 2px solid #2a6e6a;
+}
+
+.secondary-btn:hover {
+  background-color: #2a6e6a;
+  color: white;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  color: #2a6e6a;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  color: #666;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primary-btn, .secondary-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .hero-stats {
+    gap: 2rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+}

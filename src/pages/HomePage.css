@@ -1,0 +1,275 @@
+/* HomePage.css */
+
+/* Main container */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #2a6e6a;
+}
+
+/* Scroll-to-top button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #2a6e6a;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.scroll-top:hover {
+  background-color: #1d504d;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Trust indicators section */
+.trust-indicators {
+  background-color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.trust-title {
+  color: #1d504d;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.trust-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  min-width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.trust-item:hover {
+  transform: translateY(-5px);
+}
+
+.trust-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2a6e6a;
+  background: linear-gradient(135deg, #e6f7f6, #c2e9eb);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-text {
+  color: #555;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Mission statement section */
+.mission-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(to right, #f0f9f9, #e6f7f6);
+}
+
+.mission-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.mission-content h2 {
+  color: #1d504d;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.mission-content p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.mission-content p:last-child {
+  margin-bottom: 0;
+}
+
+.mission-image {
+  background-color: white;
+  border-radius: 15px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  color: #2a6e6a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0f0ef;
+  transition: transform 0.3s ease;
+}
+
+.mission-image:hover {
+  transform: scale(1.02);
+}
+
+/* Section spacing */
+.trust-indicators + .services {
+  margin-top: 0;
+}
+
+.services + .mission-section {
+  margin-top: 0;
+}
+
+.mission-section + .contact-form-section {
+  margin-top: 0;
+}
+
+/* Animation for components when they appear */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero, .services, .contact-form-section, .trust-indicators, .mission-section {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero {
+  animation-delay: 0.1s;
+}
+
+.services {
+  animation-delay: 0.2s;
+}
+
+.trust-indicators {
+  animation-delay: 0.3s;
+}
+
+.mission-section {
+  animation-delay: 0.4s;
+}
+
+.contact-form-section {
+  animation-delay: 0.5s;
+}
+
+/* Responsive adjustments for HomePage */
+@media (max-width: 992px) {
+  .mission-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .mission-image {
+    height: 250px;
+    order: -1;
+  }
+  
+  .mission-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trust-logos {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .trust-item {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .scroll-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+  
+  .trust-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  
+  .mission-section {
+    padding: 3rem 1rem;
+  }
+  
+  .trust-indicators {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .mission-content p {
+    font-size: 1rem;
+  }
+  
+  .mission-image {
+    height: 200px;
+    font-size: 4rem;
+  }
+  
+  .trust-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}
